@@ -1,0 +1,6 @@
+category: Audio
+requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base libogg0
+external-source: gstreamer010-plugins-base
+sdesc: "Ogg plugin for the GStreamer multimedia framework (0.10 branch)"
+ldesc: "Ogg plugin for the GStreamer multimedia framework (0.10 branch)"
+

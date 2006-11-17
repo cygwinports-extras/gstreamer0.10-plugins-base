@@ -3,25 +3,46 @@ gstreamer010-plugins-base
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.21-2
-  alternatives-1.3.20a-2
-  glib2-2.10.3-1
-  gstreamer010-0.10.10-1
-  liboil03-0.3.9-1
+  cygwin-1.5.22-1
+  alternatives-1.3.29a-1
+  glib2-2.12.4-1
+  gstreamer010-0.10.10-2
+  liboil03-0.3.10-1
+
+(gnome_vfs)
+  gnome-vfs2-2.16.2-1
+(libvisual)
+  libvisual04-0.4.0-1
+(ogg)
+  libogg0-1.1.2-1
+(pango)
+  pango-1.14.7-1
+(theora)
+  libtheora0-1.0alpha5-1
+(vorbis)
+  libvorbis0-1.1.1-1
+  libvorbisenc2-1.1.1-1
+(ximage)
+  libX11_6-1.0.3-1
+  libXext6-1.0.1-1
+(xvimage)
+  libX11_6-1.0.3-1
+  libXext6-1.0.1-1
+  libXv1-1.0.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-2
-  autoconf2.5-2.59-2
+  cygwin-1.5.22-1
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.5-1
+  binutils-20060817-1
+  cygport-0.2.7-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
-  gtk-doc-1.5-1
-  libtool1.5-1.5.22-1
+  gtk-doc-1.7-1
+  libtool1.5-1.5.23a-1
   make-3.81-1
-  pkg-config-0.20-1
+  pkg-config-0.21-1
   python-2.4.3-1
   pyxml-0.8.4-1
   sed-4.1.5-1
@@ -35,22 +56,32 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-base-0.10.10-1-src.tar.bz2
+  unpack gstreamer010-plugins-base-0.10.10-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-base-0.10.10-1.sh all
+  cygport ./gstreamer010-plugins-base-0.10.10-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-base-0.10.10-1-src.tar.bz2
-  /usr/src/gstreamer010-plugins-base-0.10.10-1.tar.bz2
-  /usr/src/gstreamer010-plugins-base-devel-0.10.10-1.tar.bz2
-  /usr/src/gstreamer010-plugins-base-doc-0.10.10-1.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.10-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-devel-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-doc-0.10.10-X.tar.bz2
+
+  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-libvisual-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ogg-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-pango-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-theora-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-vorbis-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ximage-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-xvimage-0.10.10-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the main package:
+Files included in the binary packages:
 
+(gstreamer010-plugins-base)
   /etc/postinstall/gstreamer010-plugins-base.sh
   /etc/preremove/gstreamer010-plugins-base.sh
   /usr/bin/cyggstaudio-0.10-0.dll
@@ -69,6 +100,7 @@ Files included in the main package:
   /usr/lib/gstreamer-0.10/cyggstaudiotestsrc.dll
   /usr/lib/gstreamer-0.10/cyggstdecodebin.dll
   /usr/lib/gstreamer-0.10/cyggstffmpegcolorspace.dll
+  /usr/lib/gstreamer-0.10/cyggstgdp.dll
   /usr/lib/gstreamer-0.10/cyggstplaybin.dll
   /usr/lib/gstreamer-0.10/cyggstsubparse.dll
   /usr/lib/gstreamer-0.10/cyggsttcp.dll
@@ -84,6 +116,7 @@ Files included in the main package:
   /usr/lib/gstreamer-0.10/libgstaudiotestsrc.la
   /usr/lib/gstreamer-0.10/libgstdecodebin.la
   /usr/lib/gstreamer-0.10/libgstffmpegcolorspace.la
+  /usr/lib/gstreamer-0.10/libgstgdp.la
   /usr/lib/gstreamer-0.10/libgstplaybin.la
   /usr/lib/gstreamer-0.10/libgstsubparse.la
   /usr/lib/gstreamer-0.10/libgsttcp.la
@@ -117,8 +150,39 @@ Files included in the main package:
   /usr/share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/man/man1/gst-visualise-0.10.1.gz
 
-Files included in the devel package:
+(gstreamer010-plugins-gnome_vfs)
+  /usr/lib/gstreamer-0.10/cyggstgnomevfs.dll
+  /usr/lib/gstreamer-0.10/libgstgnomevfs.la
 
+(gstreamer010-plugins-libvisual)
+  /usr/lib/gstreamer-0.10/cyggstlibvisual.dll
+  /usr/lib/gstreamer-0.10/libgstlibvisual.la
+
+(gstreamer010-plugins-ogg)
+  /usr/lib/gstreamer-0.10/cyggstogg.dll
+  /usr/lib/gstreamer-0.10/libgstogg.la
+
+(gstreamer010-plugins-pango)
+  /usr/lib/gstreamer-0.10/cyggstpango.dll
+  /usr/lib/gstreamer-0.10/libgstpango.la
+
+(gstreamer010-plugins-theora)
+  /usr/lib/gstreamer-0.10/cyggsttheora.dll
+  /usr/lib/gstreamer-0.10/libgsttheora.la
+
+(gstreamer010-plugins-vorbis)
+  /usr/lib/gstreamer-0.10/cyggstvorbis.dll
+  /usr/lib/gstreamer-0.10/libgstvorbis.la
+
+(gstreamer010-plugins-ximage)
+  /usr/lib/gstreamer-0.10/cyggstximagesink.dll
+  /usr/lib/gstreamer-0.10/libgstximagesink.la
+
+(gstreamer010-plugins-xvimage)
+  /usr/lib/gstreamer-0.10/cyggstxvimagesink.dll
+  /usr/lib/gstreamer-0.10/libgstxvimagesink.la
+
+(gstreamer010-plugins-base-devel)
   /usr/include/gstreamer-0.10/gst/audio/audio.h
   /usr/include/gstreamer-0.10/gst/audio/gstaudioclock.h
   /usr/include/gstreamer-0.10/gst/audio/gstaudiofilter.h
@@ -173,41 +237,11 @@ Files included in the devel package:
   /usr/lib/libgstvideo-0.10.la
   /usr/lib/pkgconfig/gstreamer-plugins-base-0.10.pc
 
-Files included in the doc package:
-
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/compiling.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudio.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudiomixerutils.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudiosink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstbaseaudiosink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcddabasesrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstcolorbalance.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstmixer.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstringbuffer.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttag.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagid3.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttagvorbis.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gsttuner.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstvideofilter.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstvideosink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstxoverlay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-audio.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-cdda.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-interfaces.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-plugins-base.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-tag.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gstreamer-video.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/home.png
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/index.html
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/index.sgml
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/left.png
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/right.png
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/style.css
-  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/up.png
+(gstreamer010-plugins-base-doc)
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch02.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-adder.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsamixer.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasink.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasrc.html
@@ -217,9 +251,12 @@ Files included in the doc package:
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-cdparanoiasrc.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-clockoverlay.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ffmpegcolorspace.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdpdepay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdppay.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssink.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssrc.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-multifdsink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-adder.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-alsa.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioconvert.html
@@ -229,6 +266,7 @@ Files included in the doc package:
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-cdparanoia.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ffmpegcolorspace.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gdp.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gnomevfs.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-libvisual.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ogg.html
@@ -272,6 +310,10 @@ Files included in the doc package:
 ------------------
 
 Port Notes:
+
+----- version 0.10.10-2 -----
+Rebuilt with updated toolchain.
+Requires cygport-0.2.7 to build separate external plugins simultaneously.
 
 ----- version 0.10.10-1 -----
 Version bump.

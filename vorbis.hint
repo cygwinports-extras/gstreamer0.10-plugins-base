@@ -1,0 +1,6 @@
+category: Audio
+requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base libvorbis0 libvorbisenc2
+external-source: gstreamer010-plugins-base
+sdesc: "Vorbis plugin for the GStreamer multimedia framework (0.10 branch)"
+ldesc: "Vorbis plugin for the GStreamer multimedia framework (0.10 branch)"
+
