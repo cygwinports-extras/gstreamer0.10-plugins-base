@@ -6,7 +6,7 @@ Runtime requirements:
   cygwin-1.5.22-1
   alternatives-1.3.29a-1
   glib2-2.12.4-1
-  gstreamer010-0.10.10-2
+  gstreamer010-0.10.11-1
   liboil03-0.3.10-1
 
 (gnome_vfs)
@@ -16,24 +16,24 @@ Runtime requirements:
 (ogg)
   libogg0-1.1.2-1
 (pango)
-  pango-1.14.7-1
+  pango-1.14.9-1
 (theora)
   libtheora0-1.0alpha5-1
 (vorbis)
   libvorbis0-1.1.1-1
   libvorbisenc2-1.1.1-1
 (ximage)
-  libX11_6-1.0.3-1
-  libXext6-1.0.1-1
+  libX11_6-1.1.1-1
+  libXext6-1.0.2-1
 (xvimage)
-  libX11_6-1.0.3-1
-  libXext6-1.0.1-1
-  libXv1-1.0.1-1
+  libX11_6-1.1.1-1
+  libXext6-1.0.2-1
+  libXv1-1.0.2-1
 
 Build requirements:
 (besides corresponding -devel packages)
   cygwin-1.5.22-1
-  autoconf2.5-2.60-1
+  autoconf2.5-2.60-2
   automake1.9-1.9.6-1
   binutils-20060817-1
   cygport-0.2.7-1
@@ -45,7 +45,7 @@ Build requirements:
   pkg-config-0.21-1
   python-2.4.3-1
   pyxml-0.8.4-1
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical website:
   http://gstreamer.freedesktop.org/
@@ -56,26 +56,26 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-base-0.10.10-X-src.tar.bz2
+  unpack gstreamer010-plugins-base-0.10.11-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-base-0.10.10-X.cygport all
+  cygport ./gstreamer010-plugins-base-0.10.11-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-base-0.10.10-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-base-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-base-devel-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-base-doc-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.11-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-devel-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-doc-0.10.11-X.tar.bz2
 
-  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-libvisual-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ogg-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-pango-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-theora-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-vorbis-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ximage-0.10.10-X.tar.bz2
-  /usr/src/gstreamer010-plugins-xvimage-0.10.10-X.tar.bz2
+  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-libvisual-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ogg-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-pango-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-theora-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-vorbis-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ximage-0.10.11-X.tar.bz2
+  /usr/src/gstreamer010-plugins-xvimage-0.10.11-X.tar.bz2
 
 -------------------------------------------
 
@@ -99,6 +99,7 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/cyggstaudioresample.dll
   /usr/lib/gstreamer-0.10/cyggstaudiotestsrc.dll
   /usr/lib/gstreamer-0.10/cyggstdecodebin.dll
+  /usr/lib/gstreamer-0.10/cyggstdecodebin2.dll
   /usr/lib/gstreamer-0.10/cyggstffmpegcolorspace.dll
   /usr/lib/gstreamer-0.10/cyggstgdp.dll
   /usr/lib/gstreamer-0.10/cyggstplaybin.dll
@@ -115,6 +116,7 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstaudioresample.la
   /usr/lib/gstreamer-0.10/libgstaudiotestsrc.la
   /usr/lib/gstreamer-0.10/libgstdecodebin.la
+  /usr/lib/gstreamer-0.10/libgstdecodebin2.la
   /usr/lib/gstreamer-0.10/libgstffmpegcolorspace.la
   /usr/lib/gstreamer-0.10/libgstgdp.la
   /usr/lib/gstreamer-0.10/libgstplaybin.la
@@ -125,15 +127,15 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstvideoscale.la
   /usr/lib/gstreamer-0.10/libgstvideotestsrc.la
   /usr/lib/gstreamer-0.10/libgstvolume.la
-  /usr/share/doc/Cygwin/gstreamer010-plugins-base-0.10.10.README
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/ABOUT-NLS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/COPYING
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/COPYING.LIB
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/INSTALL
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/NEWS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.10/README
+  /usr/share/doc/Cygwin/gstreamer010-plugins-base-0.10.11.README
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/ABOUT-NLS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/COPYING
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/COPYING.LIB
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/INSTALL
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/NEWS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.11/README
   /usr/share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/cs/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -310,6 +312,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.10.11-1 -----
+Version bump.
 
 ----- version 0.10.10-2 -----
 Rebuilt with updated toolchain.

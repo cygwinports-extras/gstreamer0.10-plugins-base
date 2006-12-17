@@ -6,6 +6,7 @@ usr/lib/gstreamer-0.10/*gstaudiorate.*
 usr/lib/gstreamer-0.10/*gstaudioresample.*
 usr/lib/gstreamer-0.10/*gstaudiotestsrc.*
 usr/lib/gstreamer-0.10/*gstdecodebin.*
+usr/lib/gstreamer-0.10/*gstdecodebin2.*
 usr/lib/gstreamer-0.10/*gstffmpegcolorspace.*
 usr/lib/gstreamer-0.10/*gstgdp.*
 usr/lib/gstreamer-0.10/*gstplaybin.*
