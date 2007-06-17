@@ -10,9 +10,11 @@ usr/lib/gstreamer-0.10/*gstdecodebin2.*
 usr/lib/gstreamer-0.10/*gstffmpegcolorspace.*
 usr/lib/gstreamer-0.10/*gstgdp.*
 usr/lib/gstreamer-0.10/*gstplaybin.*
+usr/lib/gstreamer-0.10/*gstqueue2.*
 usr/lib/gstreamer-0.10/*gstsubparse.*
 usr/lib/gstreamer-0.10/*gsttcp.*
 usr/lib/gstreamer-0.10/*gsttypefindfunctions.*
+usr/lib/gstreamer-0.10/*gsturidecodebin.*
 usr/lib/gstreamer-0.10/*gstvideorate.*
 usr/lib/gstreamer-0.10/*gstvideoscale.*
 usr/lib/gstreamer-0.10/*gstvideotestsrc.*
