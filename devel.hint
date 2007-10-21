@@ -1,5 +1,5 @@
 category: Gnome Audio
-requires: cygwin glib2-devel gstreamer010-devel liboil03-devel
+requires: cygwin glib2-devel gstreamer010-devel gettext liboil03-devel
 external-source: gstreamer010-plugins-base
 sdesc: "Base plugins for the GStreamer media framework (0.10 development)"
 ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."
