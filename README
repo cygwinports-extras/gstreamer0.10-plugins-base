@@ -6,7 +6,7 @@ Runtime requirements:
   cygwin-1.5.25-7
   alternatives-1.3.29a-1
   glib2-2.14.5-1
-  gstreamer010-0.10.16-1
+  gstreamer010-0.10.17-1
   libintl8-0.15-1
   liboil03-0.3.11-2
 
@@ -55,24 +55,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-base-0.10.16-X-src.tar.bz2
+  unpack gstreamer010-plugins-base-0.10.17-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-base-0.10.16-X.cygport all
+  cygport ./gstreamer010-plugins-base-0.10.17-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-base-0.10.16-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-base-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-base-devel-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-cdparanoia-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-libvisual-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ogg-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-pango-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-theora-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-vorbis-0.10.16-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ximage-0.10.16-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.17-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-devel-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-cdparanoia-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-libvisual-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ogg-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-pango-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-theora-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-vorbis-0.10.17-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ximage-0.10.17-X.tar.bz2
 
 -------------------------------------------
 
@@ -130,14 +130,14 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstvideoscale.la
   /usr/lib/gstreamer-0.10/libgstvideotestsrc.la
   /usr/lib/gstreamer-0.10/libgstvolume.la
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/ABOUT-NLS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/COPYING
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/COPYING.LIB
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/INSTALL
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/NEWS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.16/README
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/ABOUT-NLS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/COPYING
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/COPYING.LIB
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/INSTALL
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/NEWS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.17/README
   /usr/share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/bg/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -456,7 +456,7 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.10.16-1 -----
+----- version 0.10.17-1 -----
 Version bump.
 
 ----- version 0.10.15-1 -----
