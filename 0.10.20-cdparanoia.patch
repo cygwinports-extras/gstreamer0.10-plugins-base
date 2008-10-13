@@ -1,0 +1,82 @@
+--- origsrc/gst-plugins-base-0.10.20/configure.ac	2008-06-18 07:40:44.000000000 -0500
++++ src/gst-plugins-base-0.10.20/configure.ac	2008-06-19 01:25:49.765625000 -0500
+@@ -436,21 +436,30 @@
+                       cdda_interface.h, 
+                       CDPARANOIA_LIBS="-lcdda_interface -lcdda_paranoia"
+                       HEADER_DIR="no"
+-                      FOUND_CDPARANOIA="yes")
+-  if test "x$FOUND_CDPARANOIA" != "xyes";
++                      HAVE_CDPARANOIA="yes")
++  if test "x$HAVE_CDPARANOIA" != "xyes";
+   then
+     AG_GST_CHECK_LIBHEADER(CDPARANOIA, cdda_interface, 
+                         cdda_open, -lm, 
+                         cdda/cdda_interface.h, 
+                         CDPARANOIA_LIBS="-lcdda_interface -lcdda_paranoia"
+                         HEADER_DIR="yes"
+-                        FOUND_CDPARANOIA="yes")
++                        HAVE_CDPARANOIA="yes")
++  fi
++  if test "x$HAVE_CDPARANOIA" != "xyes";
++  then
++    PKG_CHECK_MODULES(CDPARANOIA, libcdio_paranoia, [
++                        AC_DEFINE_UNQUOTED(WITH_CDIO_PARANOIA, , 
++                                           defined if using libcdio_paranoia)
++                        HAVE_CDPARANOIA="yes"
++                     ])
+   fi
+   if test "x$HEADER_DIR" = "xyes";
+   then
+     AC_DEFINE_UNQUOTED(CDPARANOIA_HEADERS_IN_DIR, ,
+                        defined if cdda headers are in a cdda/ directory)
+   fi
++  AC_SUBST(CDPARANOIA_CFLAGS)
+   AC_SUBST(CDPARANOIA_LIBS)
+ ])
+ dnl FIXME : add second check somehow if that is necessary
+--- origsrc/gst-plugins-base-0.10.20/ext/cdparanoia/gstcdparanoiasrc.c	2008-06-04 14:42:00.000000000 -0500
++++ src/gst-plugins-base-0.10.20/ext/cdparanoia/gstcdparanoiasrc.c	2008-06-19 01:25:49.781250000 -0500
+@@ -199,15 +199,19 @@
+       device, GST_STR_NULL (src->generic_device));
+ 
+   /* find the device */
++#ifndef WITH_CDIO_PARANOIA
+   if (src->generic_device != NULL) {
+     src->d = cdda_identify_scsi (src->generic_device, device, FALSE, NULL);
+   } else {
++#endif
+     if (device != NULL) {
+       src->d = cdda_identify (device, FALSE, NULL);
+     } else {
+       src->d = cdda_identify ("/dev/cdrom", FALSE, NULL);
+     }
++#ifndef WITH_CDIO_PARANOIA
+   }
++#endif
+ 
+   /* fail if the device couldn't be found */
+   if (src->d == NULL)
+--- origsrc/gst-plugins-base-0.10.20/ext/cdparanoia/gstcdparanoiasrc.h	2007-02-15 09:17:21.000000000 -0600
++++ src/gst-plugins-base-0.10.20/ext/cdparanoia/gstcdparanoiasrc.h	2008-06-19 01:25:49.796875000 -0500
+@@ -27,6 +27,13 @@
+ #define size16 gint16
+ #define size32 gint32
+ 
++#ifdef WITH_CDIO_PARANOIA
++  #include <cdio/cdda.h>
++  #include <cdio/paranoia.h>
++  #define cdrom_paranoia	cdrom_paranoia_t
++  #define CD_FRAMESIZE_RAW 	CDIO_CD_FRAMESIZE_RAW
++  #define IS_AUDIO(d,i)		(!(d->disc_toc[i].bTrack & CDIO_CDROM_DATA_TRACK))
++#else
+ #ifdef CDPARANOIA_HEADERS_IN_DIR
+   #include <cdda/cdda_interface.h>
+   #include <cdda/cdda_paranoia.h>
+@@ -34,6 +41,7 @@
+   #include <cdda_interface.h>
+   #include <cdda_paranoia.h>
+ #endif
++#endif
+ 
+ #define GST_TYPE_CD_PARANOIA_SRC            (gst_cd_paranoia_src_get_type())
+ #define GST_CD_PARANOIA_SRC(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj),GST_TYPE_CD_PARANOIA_SRC,GstCdParanoiaSrc))

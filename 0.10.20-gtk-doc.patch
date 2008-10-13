@@ -1,0 +1,11 @@
+--- origsrc/gst-plugins-base-0.10.20/docs/plugins/Makefile.am	2008-06-04 14:42:00.000000000 -0500
++++ src/gst-plugins-base-0.10.20/docs/plugins/Makefile.am	2008-06-19 12:03:51.875000000 -0500
+@@ -109,7 +109,7 @@
+ 	$(top_srcdir)/gst/playback/gstplay-enum.h \
+ 	$(top_srcdir)/gst/tcp/gstmultifdsink.h \
+ 	$(top_srcdir)/gst/tcp/gsttcpserversink.h \
+-	$(top_srcdir)/gst/tcp/gsttcp-enumtypes.h \
++	$(top_builddir)/gst/tcp/gsttcp-enumtypes.h \
+ 	$(top_srcdir)/gst/tcp/gsttcp.h \
+ 	$(top_srcdir)/gst/videorate/gstvideorate.h \
+ 	$(top_srcdir)/gst/videoscale/gstvideoscale.h \

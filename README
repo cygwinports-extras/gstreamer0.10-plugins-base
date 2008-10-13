@@ -5,9 +5,9 @@ A collection of plugins for the GStreamer media framework.
 Runtime requirements:
   cygwin-1.5.25-15
   alternatives
-  glib2-2.16.3-1
-  gstreamer010-0.10.20-1
-  libintl8-0.15-1
+  glib2-2.16.6-1
+  gstreamer010-0.10.21-1
+  libintl8-0.17-1
   liboil03-0.3.14-1
 
 (cdparanoia)
@@ -31,17 +31,17 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
+  autoconf2.5-2.63-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.3.11-1
+  cygport-0.4.1-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gtk-doc-1.10-1
-  libtool-2.2.2-2
+  libtool-2.2.6a-1
   make-3.81-1
-  pkg-config-0.21-1
-  python-2.5.2-1
+  pkg-config-0.23a-2
+  python-2.5.2-3
   python-xml-0.8.4-2
   sed-4.1.5-2
 
@@ -54,24 +54,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-base-0.10.20-X-src.tar.bz2
+  unpack gstreamer010-plugins-base-0.10.21-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-base-0.10.20-X.cygport all
+  cygport ./gstreamer010-plugins-base-0.10.21-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-base-0.10.20-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-base-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-base-devel-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-cdparanoia-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-libvisual-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ogg-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-pango-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-theora-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-vorbis-0.10.20-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ximage-0.10.20-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.21-X-src.tar.bz2
+  /usr/src/gstreamer010-plugins-base-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-base-devel-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-cdparanoia-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-libvisual-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ogg-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-pango-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-theora-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-vorbis-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-ximage-0.10.21-X.tar.bz2
 
 -------------------------------------------
 
@@ -129,14 +129,14 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstvideoscale.la
   /usr/lib/gstreamer-0.10/libgstvideotestsrc.la
   /usr/lib/gstreamer-0.10/libgstvolume.la
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/ABOUT-NLS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/COPYING
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/COPYING.LIB
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/INSTALL
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/NEWS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.20/README
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/ABOUT-NLS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/AUTHORS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/COPYING
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/COPYING.LIB
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/ChangeLog
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/INSTALL
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/NEWS
+  /usr/share/doc/gstreamer010-plugins-base-0.10.21/README
   /usr/share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/bg/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -454,6 +454,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.10.21-1 -----
+Version bump.
 
 ----- version 0.10.20-1 -----
 Version bump.

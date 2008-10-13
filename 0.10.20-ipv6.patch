@@ -1,0 +1,90 @@
+--- origsrc/gst-plugins-base-0.10.20/gst/tcp/gstmultifdsink.c	2008-06-04 14:42:02.000000000 -0500
++++ src/gst-plugins-base-0.10.20/gst/tcp/gstmultifdsink.c	2008-06-19 09:14:15.203125000 -0500
+@@ -731,6 +731,7 @@
+ 
+   af = ssaddr.ss_family;
+ 
++#ifdef AF_INET6
+   /* if this is an IPv4-mapped address then do IPv4 QoS */
+   if (af == AF_INET6) {
+     struct sockaddr_in6 *saddr6 = (struct sockaddr_in6 *) &ssaddr;
+@@ -741,6 +742,7 @@
+       af = AF_INET;
+     }
+   }
++#endif
+ 
+   /* extract and shift 6 bits of the DSCP */
+   tos = (sink->qos_dscp & 0x3f) << 2;
+@@ -749,6 +751,7 @@
+     case AF_INET:
+       ret = setsockopt (client->fd.fd, IPPROTO_IP, IP_TOS, &tos, sizeof (tos));
+       break;
++#ifdef AF_INET6
+     case AF_INET6:
+ #ifdef IPV6_TCLASS
+       ret =
+@@ -756,6 +759,7 @@
+           sizeof (tos));
+       break;
+ #endif
++#endif
+     default:
+       ret = 0;
+       GST_ERROR_OBJECT (sink, "unsupported AF");
+--- origsrc/gst-plugins-base-0.10.20/gst-libs/gst/rtsp/gstrtspconnection.c	2008-06-11 14:57:39.000000000 -0500
++++ src/gst-plugins-base-0.10.20/gst-libs/gst/rtsp/gstrtspconnection.c	2008-06-19 03:09:59.562500000 -0500
+@@ -1563,6 +1563,7 @@
+ 
+   af = sa_s.ss_family;
+ 
++#ifdef AF_INET6
+   /* if this is an IPv4-mapped address then do IPv4 QoS */
+   if (af == AF_INET6) {
+     struct sockaddr_in6 *saddr6 = (struct sockaddr_in6 *) &sa_s;
+@@ -1570,6 +1571,7 @@
+     if (IN6_IS_ADDR_V4MAPPED (&saddr6->sin6_addr))
+       af = AF_INET;
+   }
++#endif
+ 
+   /* extract and shift 6 bits of the DSCP */
+   tos = (qos_dscp & 0x3f) << 2;
+@@ -1579,6 +1581,7 @@
+       if (SETSOCKOPT (conn->fd.fd, IPPROTO_IP, IP_TOS, &tos, sizeof (tos)) < 0)
+         goto no_setsockopt;
+       break;
++#ifdef AF_INET6
+     case AF_INET6:
+ #ifdef IPV6_TCLASS
+       if (SETSOCKOPT (conn->fd.fd, IPPROTO_IPV6, IPV6_TCLASS, &tos,
+@@ -1586,6 +1589,7 @@
+         goto no_setsockopt;
+       break;
+ #endif
++#endif
+     default:
+       goto wrong_family;
+   }
+--- origsrc/gst-plugins-base-0.10.20/gst-libs/gst/sdp/Makefile.am	2007-11-01 08:28:59.000000000 -0500
++++ src/gst-plugins-base-0.10.20/gst-libs/gst/sdp/Makefile.am	2008-06-19 01:25:49.828125000 -0500
+@@ -9,4 +9,4 @@
+ 
+ libgstsdp_@GST_MAJORMINOR@_la_CFLAGS = $(GST_PLUGINS_BASE_CFLAGS) $(GST_BASE_CFLAGS) $(GST_CFLAGS)
+ libgstsdp_@GST_MAJORMINOR@_la_LIBADD = $(GST_LIBS) $(WIN32_LIBS)
+-libgstsdp_@GST_MAJORMINOR@_la_LDFLAGS = $(GST_LIB_LDFLAGS) $(GST_ALL_LDFLAGS) $(GST_LT_LDFLAGS)
++libgstsdp_@GST_MAJORMINOR@_la_LDFLAGS = $(GST_LIB_LDFLAGS) $(GST_ALL_LDFLAGS) $(GST_LT_LDFLAGS) -Wl,-lgetaddrinfo
+--- origsrc/gst-plugins-base-0.10.20/gst-libs/gst/sdp/gstsdpmessage.c	2008-03-18 06:35:39.000000000 -0500
++++ src/gst-plugins-base-0.10.20/gst-libs/gst/sdp/gstsdpmessage.c	2008-06-19 01:25:49.828125000 -0500
+@@ -79,6 +79,11 @@
+ #include <netinet/in.h>
+ #endif
+ 
++#ifdef G_WITH_CYGWIN
++#include <dummyin6.h>
++#include <getaddrinfo.h>
++#endif
++
+ #include "gstsdpmessage.h"
+ 
+ /* FIXME, is currently allocated on the stack */
