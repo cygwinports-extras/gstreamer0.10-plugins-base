@@ -19,5 +19,6 @@ usr/lib/gstreamer-0.10/*gstvideoscale.*
 usr/lib/gstreamer-0.10/*gstvideotestsrc.*
 usr/lib/gstreamer-0.10/*gstvolume.*
 usr/share/doc/
+usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/
 usr/share/locale/
 usr/share/man/

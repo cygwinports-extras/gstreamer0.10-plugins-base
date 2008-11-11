@@ -1,4 +1,4 @@
-GST_PLUGINS_EXT="cdparanoia gnome_vfs libvisual ogg pango theora vorbis ximage"
+GST_PLUGINS_EXT="cdparanoia gio gnome_vfs libvisual ogg pango theora vorbis ximage"
 inherit gst-plugins
 
 PATCH_URI="
@@ -11,7 +11,8 @@ PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="base devel"
 PKG_LISTS="base"
 PKG_CONTENTS[0]= # base.list
-PKG_CONTENTS[1]='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+PKG_CONTENTS[1]="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
+                 usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/"
 
 n=2
 for ext in ${GST_PLUGINS_EXT}
@@ -21,5 +22,3 @@ do
 	PKG_CONTENTS[$((n++))]="${GST_PLUGINDIR#/}/*gst${ext//_/}*"
 done
 unset ext n
-
-CYGCONF_ARGS+=" ac_cv_header_winsock2_h=no"

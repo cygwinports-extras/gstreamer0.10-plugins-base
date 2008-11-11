@@ -7,7 +7,7 @@ Runtime requirements:
   alternatives
   glib2-2.16.6-1
   gstreamer010-0.10.21-1
-  libintl8-0.17-1
+  libintl8-0.17-2
   liboil03-0.3.14-1
 
 (cdparanoia)
@@ -21,7 +21,7 @@ Runtime requirements:
 (pango)
   pango-1.20.3-1
 (theora)
-  libtheora0-1.0beta3-1
+  libtheora0-1.0-1
 (vorbis)
   libvorbis0-1.2.0-1
   libvorbisenc2-1.2.0-1
@@ -34,7 +34,7 @@ Build requirements:
   autoconf2.5-2.63-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.4.1-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gtk-doc-1.10-1
@@ -65,6 +65,7 @@ This will create:
   /usr/src/gstreamer010-plugins-base-0.10.21-X.tar.bz2
   /usr/src/gstreamer010-plugins-base-devel-0.10.21-X.tar.bz2
   /usr/src/gstreamer010-plugins-cdparanoia-0.10.21-X.tar.bz2
+  /usr/src/gstreamer010-plugins-gio-0.10.21-X.tar.bz2
   /usr/src/gstreamer010-plugins-gnome_vfs-0.10.21-X.tar.bz2
   /usr/src/gstreamer010-plugins-libvisual-0.10.21-X.tar.bz2
   /usr/src/gstreamer010-plugins-ogg-0.10.21-X.tar.bz2
@@ -137,6 +138,92 @@ Files included in the binary packages:
   /usr/share/doc/gstreamer010-plugins-base-0.10.21/INSTALL
   /usr/share/doc/gstreamer010-plugins-base-0.10.21/NEWS
   /usr/share/doc/gstreamer010-plugins-base-0.10.21/README
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/GstPlayBaseBin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch01.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch02.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch03.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp2
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-adder.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsamixer.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioconvert.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioresample.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audiotestsrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-cdparanoiasrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-clockoverlay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin2.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ffmpegcolorspace.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdpdepay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdppay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giosink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giosrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giostreamsink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-giostreamsrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-multifdsink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-oggdemux.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-oggmux.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin2.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-adder.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-alsa.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioconvert.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiorate.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioresample.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiotestsrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-cdparanoia.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin2.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ffmpegcolorspace.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gdp.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gio.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gnomevfs.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-libvisual.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ogg.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-pango.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-playback.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-subparse.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-tcp.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-theora.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-typefindfunctions.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-uridecodebin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-video4linux.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videorate.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videoscale.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videotestsrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-volume.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-vorbis.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ximagesink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-xvimagesink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-tcpserversink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-textoverlay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-textrender.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-theoradec.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-theoraenc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-theoraparse.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-timeoverlay.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-uridecodebin.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videorate.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videoscale.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videotestsrc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-volume.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisdec.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisenc.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisparse.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbistag.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ximagesink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-xvimagesink.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/home.png
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/index.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/index.sgml
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/left.png
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/right.png
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/style.css
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/up.png
   /usr/share/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/locale/bg/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -165,6 +252,10 @@ Files included in the binary packages:
 (gstreamer010-plugins-cdparanoia)
   /usr/lib/gstreamer-0.10/cyggstcdparanoia.dll
   /usr/lib/gstreamer-0.10/libgstcdparanoia.la
+
+(gstreamer010-plugins-gio)
+  /usr/lib/gstreamer-0.10/cyggstgio.dll
+  /usr/lib/gstreamer-0.10/libgstgio.la
 
 (gstreamer010-plugins-gnome_vfs)
   /usr/lib/gstreamer-0.10/cyggstgnomevfs.dll
@@ -297,6 +388,7 @@ Files included in the binary packages:
   /usr/lib/pkgconfig/gstreamer-video-0.10.pc
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/api-index.html
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/compiling.html
+  /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/compiling.sgml
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-0.10.devhelp2
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/gst-plugins-base-libs-gstaudio.html
@@ -377,83 +469,13 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/right.png
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/style.css
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/up.png
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch01.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch02.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp2
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-adder.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsamixer.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioconvert.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audioresample.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-audiotestsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-cdparanoiasrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-clockoverlay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-decodebin2.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ffmpegcolorspace.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdpdepay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gdppay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-gnomevfssrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-multifdsink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-oggdemux.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-adder.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-alsa.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioconvert.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiorate.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioresample.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiotestsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-cdparanoia.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-decodebin2.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ffmpegcolorspace.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gdp.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-gnomevfs.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-libvisual.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ogg.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-pango.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-playbin.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-subparse.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-tcp.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-theora.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-typefindfunctions.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-video4linux.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videorate.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videoscale.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-videotestsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-volume.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-vorbis.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-ximagesink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-xvimagesink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-tcpserversink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-textoverlay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-textrender.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-theoradec.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-theoraenc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-timeoverlay.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videorate.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videoscale.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-videotestsrc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-volume.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisdec.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisenc.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbisparse.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-vorbistag.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-ximagesink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-xvimagesink.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/home.png
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/index.html
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/index.sgml
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/left.png
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/right.png
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/style.css
-  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/up.png
 
 ------------------
 
 Port Notes:
+
+----- version 0.10.21-2 -----
+Added plugins: gio.
 
 ----- version 0.10.21-1 -----
 Version bump.
