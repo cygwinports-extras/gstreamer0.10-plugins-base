@@ -1,5 +1,5 @@
 category: Audio Gnome
-requires: cygwin glib2 gstreamer010 gnome-vfs2
-external-source: gstreamer010-plugins-base
+requires: cygwin libglib2.0_0 libgstreamer0.10_0 libgsttag0.10_0 libgnomevfs2_0 libintl8
+external-source: gstreamer0.10-plugins-base
 sdesc: "GNOME VFS plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "GNOME VFS plugin for the GStreamer multimedia framework (0.10 branch)"

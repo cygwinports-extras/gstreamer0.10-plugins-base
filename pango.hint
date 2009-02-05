@@ -1,6 +1,6 @@
 category: Audio
-requires: cygwin glib2 gstreamer010 pango
-external-source: gstreamer010-plugins-base
+requires: cygwin libglib2.0_0 libgstreamer0.10_0 libgstvideo0.10_0 libpango1.0_0
+external-source: gstreamer0.10-plugins-base
 sdesc: "Pango plugin for the GStreamer multimedia framework (0.10 branch)"
 ldesc: "Pango plugin for the GStreamer multimedia framework (0.10 branch)"
 

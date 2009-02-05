@@ -1,0 +1,44 @@
+GST_PLUGINS_EXT="cdparanoia gio gnome_vfs libvisual ogg pango theora vorbis ximage"
+inherit gst-plugins
+
+PATCH_URI="
+	0.10.20-cdparanoia.patch
+	0.10.20-gtk-doc.patch
+	0.10.20-ipv6.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="base devel"
+gstreamer0_10_plugins_base_devel_CONTENTS="usr/lib/pkgconfig/gstreamer-plugins-base-0.10.pc
+                                           usr/share/gtk-doc/html/${ORIG_PN}-libs-0.10/"
+
+for ext in ${GST_PLUGINS_EXT}
+do
+	PKG_NAMES+=" gstreamer0.10-plugins-${ext}"
+	PKG_HINTS+=" ${ext}"
+	declare \
+	gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gst${ext//_/}*"
+	gstreamer0_10_plugins_base_CONTENTS+=" --exclude=*gst${ext//_/}*"
+done
+unset ext
+
+for lib in app audio cdda fft interfaces netbuffer pbutils riff rtp rtsp sdp tag video
+do
+	PKG_NAMES+=" libgst${lib}0.10_0 libgst${lib}0.10-devel"
+	PKG_HINTS+=" libgst${lib}0.10_0 libgst${lib}0.10-devel"
+	declare libgst${lib}0_10_0_CONTENTS="usr/bin/cyggst${lib}-0.10-0.dll"
+	declare \
+	libgst${lib}0_10_devel_CONTENTS="usr/include/gstreamer-0.10/gst/${lib}/
+	                                 usr/lib/libgst${lib}-0.10.*
+	                                 usr/lib/pkgconfig/gstreamer-${lib}-0.10.pc"
+done
+unset lib
+
+PKG_NAMES+=" libgstfloatcast0.10-devel"
+PKG_HINTS+=" libgstfloatcast0.10-devel"
+libgstfloatcast0_10_devel_CONTENTS="usr/include/gstreamer-0.10/gst/floatcast/
+                                    usr/lib/pkgconfig/gstreamer-floatcast-0.10.pc"
+
+gstreamer0_10_plugins_base_CONTENTS+=" etc/ usr/bin/gst* usr/lib/gstreamer-0.10/
+                                       usr/share/doc/ usr/share/gtk-doc/html/${ORIG_PN}-plugins-0.10/
+                                       usr/share/locale/ usr/share/man/"

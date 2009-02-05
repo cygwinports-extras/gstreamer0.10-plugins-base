@@ -1,47 +1,50 @@
-gstreamer010-plugins-base
+gstreamer0.10-plugins-base
 ------------------------------------------
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
   cygwin-1.5.25-15
   alternatives
-  glib2-2.16.6-1
-  gstreamer010-0.10.21-1
+  libglib2.0_0-2.18.4-1
+  libgstreamer0.10_0-0.10.22-1
   libintl8-0.17-2
-  liboil03-0.3.14-1
+  liboil0.3_0-0.3.15-2
 
 (cdparanoia)
-  libcdio7-0.80.0-2
+  libcdio_cdda0-0.81-1
+  libcdio_paranoia0-0.81-1
 (gnome_vfs)
-  gnome-vfs2-2.22.0-1
+  libgnomevfs2_0-2.24.0-1
 (libvisual)
-  libvisual04-0.4.0-1
+  libvisual0.4_0-0.4.0-2
+  libvisual0.4-plugins-0.4.0-2
 (ogg)
   libogg0-1.1.3-1
 (pango)
-  pango-1.20.3-1
+  libpango1.0_0-1.22.4-1
 (theora)
-  libtheora0-1.0-1
+  libtheoradec1-1.0-1
+  libtheoraenc1-1.0-1
 (vorbis)
   libvorbis0-1.2.0-1
   libvorbisenc2-1.2.0-1
 (ximage)
-  libX11_6-1.1.3-1
-  libXext6-1.0.3-1
+  libX11_6-1.1.5-2
+  libXext6-1.0.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
   cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gtk-doc-1.10-1
+  gtk-doc-1.11-1
   libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
-  python-2.5.2-3
+  python-2.5.4-1
   python-xml-0.8.4-2
   sed-4.1.5-2
 
@@ -54,45 +57,60 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer010-plugins-base-0.10.21-X-src.tar.bz2
+  unpack gstreamer0.10-plugins-base-0.10.22-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer010-plugins-base-0.10.21-X.cygport all
+  cygport ./gstreamer0.10-plugins-base-0.10.22-X.cygport all
 
 This will create:
-  /usr/src/gstreamer010-plugins-base-0.10.21-X-src.tar.bz2
-  /usr/src/gstreamer010-plugins-base-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-base-devel-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-cdparanoia-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-gio-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-gnome_vfs-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-libvisual-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ogg-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-pango-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-theora-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-vorbis-0.10.21-X.tar.bz2
-  /usr/src/gstreamer010-plugins-ximage-0.10.21-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-base-0.10.22-X-src.tar.bz2
+  /usr/src/gstreamer0.10-plugins-base-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-base-devel-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-cdparanoia-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-gio-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-gnome_vfs-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-libvisual-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ogg-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-pango-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-theora-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-vorbis-0.10.22-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ximage-0.10.22-X.tar.bz2
+  /usr/src/libgstapp0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstapp0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstaudio0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstaudio0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstcdda0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstcdda0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstfft0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstfft0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstfloatcast0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstinterfaces0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstinterfaces0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstnetbuffer0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstnetbuffer0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstpbutils0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstpbutils0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstriff0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstriff0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstrtp0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstrtp0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstrtsp0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstrtsp0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstsdp0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstsdp0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgsttag0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgsttag0.10_0-0.10.22-X.tar.bz2
+  /usr/src/libgstvideo0.10-devel-0.10.22-X.tar.bz2
+  /usr/src/libgstvideo0.10_0-0.10.22-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(gstreamer010-plugins-base)
-  /etc/postinstall/gstreamer010-plugins-base.sh
-  /etc/preremove/gstreamer010-plugins-base.sh
-  /usr/bin/cyggstaudio-0.10-0.dll
-  /usr/bin/cyggstcdda-0.10-0.dll
-  /usr/bin/cyggstfft-0.10-0.dll
-  /usr/bin/cyggstinterfaces-0.10-0.dll
-  /usr/bin/cyggstnetbuffer-0.10-0.dll
-  /usr/bin/cyggstpbutils-0.10-0.dll
-  /usr/bin/cyggstriff-0.10-0.dll
-  /usr/bin/cyggstrtp-0.10-0.dll
-  /usr/bin/cyggstrtsp-0.10-0.dll
-  /usr/bin/cyggstsdp-0.10-0.dll
-  /usr/bin/cyggsttag-0.10-0.dll
-  /usr/bin/cyggstvideo-0.10-0.dll
+(gstreamer0.10-plugins-base)
+  /etc/postinstall/gstreamer0.10-plugins-base.sh
+  /etc/preremove/gstreamer0.10-plugins-base.sh
   /usr/bin/gst-visualise-0.10
   /usr/lib/gstreamer-0.10/cyggstadder.dll
   /usr/lib/gstreamer-0.10/cyggstaudioconvert.dll
@@ -130,14 +148,14 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstvideoscale.la
   /usr/lib/gstreamer-0.10/libgstvideotestsrc.la
   /usr/lib/gstreamer-0.10/libgstvolume.la
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/ABOUT-NLS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/AUTHORS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/COPYING
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/COPYING.LIB
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/ChangeLog
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/INSTALL
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/NEWS
-  /usr/share/doc/gstreamer010-plugins-base-0.10.21/README
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/ABOUT-NLS
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/AUTHORS
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/COPYING
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/COPYING.LIB
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/ChangeLog
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/INSTALL
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/NEWS
+  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/README
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/GstPlayBaseBin.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch02.html
@@ -145,6 +163,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-0.10.devhelp2
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-adder.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-app.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsamixer.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasink.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-alsasrc.html
@@ -170,6 +189,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-playbin2.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-adder.html
+  /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-app.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-alsa.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audioconvert.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/gst-plugins-base-plugins-plugin-audiorate.html
@@ -249,43 +269,77 @@ Files included in the binary packages:
   /usr/share/locale/zh_CN/LC_MESSAGES/gst-plugins-base-0.10.mo
   /usr/share/man/man1/gst-visualise-0.10.1.gz
 
-(gstreamer010-plugins-cdparanoia)
+(gstreamer0.10-plugins-cdparanoia)
   /usr/lib/gstreamer-0.10/cyggstcdparanoia.dll
   /usr/lib/gstreamer-0.10/libgstcdparanoia.la
 
-(gstreamer010-plugins-gio)
+(gstreamer0.10-plugins-gio)
   /usr/lib/gstreamer-0.10/cyggstgio.dll
   /usr/lib/gstreamer-0.10/libgstgio.la
 
-(gstreamer010-plugins-gnome_vfs)
+(gstreamer0.10-plugins-gnome_vfs)
   /usr/lib/gstreamer-0.10/cyggstgnomevfs.dll
   /usr/lib/gstreamer-0.10/libgstgnomevfs.la
 
-(gstreamer010-plugins-libvisual)
+(gstreamer0.10-plugins-libvisual)
   /usr/lib/gstreamer-0.10/cyggstlibvisual.dll
   /usr/lib/gstreamer-0.10/libgstlibvisual.la
 
-(gstreamer010-plugins-ogg)
+(gstreamer0.10-plugins-ogg)
   /usr/lib/gstreamer-0.10/cyggstogg.dll
   /usr/lib/gstreamer-0.10/libgstogg.la
 
-(gstreamer010-plugins-pango)
+(gstreamer0.10-plugins-pango)
   /usr/lib/gstreamer-0.10/cyggstpango.dll
   /usr/lib/gstreamer-0.10/libgstpango.la
 
-(gstreamer010-plugins-theora)
+(gstreamer0.10-plugins-theora)
   /usr/lib/gstreamer-0.10/cyggsttheora.dll
   /usr/lib/gstreamer-0.10/libgsttheora.la
 
-(gstreamer010-plugins-vorbis)
+(gstreamer0.10-plugins-vorbis)
   /usr/lib/gstreamer-0.10/cyggstvorbis.dll
   /usr/lib/gstreamer-0.10/libgstvorbis.la
 
-(gstreamer010-plugins-ximage)
+(gstreamer0.10-plugins-ximage)
   /usr/lib/gstreamer-0.10/cyggstximagesink.dll
   /usr/lib/gstreamer-0.10/libgstximagesink.la
 
-(gstreamer010-plugins-base-devel)
+(libgst*0.10_0)
+  /usr/bin/cyggstapp-0.10-0.dll
+
+  /usr/bin/cyggstaudio-0.10-0.dll
+
+  /usr/bin/cyggstcdda-0.10-0.dll
+
+  /usr/bin/cyggstfft-0.10-0.dll
+
+  /usr/bin/cyggstinterfaces-0.10-0.dll
+
+  /usr/bin/cyggstnetbuffer-0.10-0.dll
+
+  /usr/bin/cyggstpbutils-0.10-0.dll
+
+  /usr/bin/cyggstriff-0.10-0.dll
+
+  /usr/bin/cyggstrtp-0.10-0.dll
+
+  /usr/bin/cyggstrtsp-0.10-0.dll
+
+  /usr/bin/cyggstsdp-0.10-0.dll
+
+  /usr/bin/cyggsttag-0.10-0.dll
+
+  /usr/bin/cyggstvideo-0.10-0.dll
+
+(libgst*0.10-devel)
+  /usr/include/gstreamer-0.10/gst/app/gstappbuffer.h
+  /usr/include/gstreamer-0.10/gst/app/gstappsink.h
+  /usr/include/gstreamer-0.10/gst/app/gstappsrc.h
+  /usr/lib/libgstapp-0.10.dll.a
+  /usr/lib/libgstapp-0.10.la
+  /usr/lib/pkgconfig/gstreamer-app-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/audio/audio.h
   /usr/include/gstreamer-0.10/gst/audio/gstaudioclock.h
   /usr/include/gstreamer-0.10/gst/audio/gstaudiofilter.h
@@ -297,13 +351,27 @@ Files included in the binary packages:
   /usr/include/gstreamer-0.10/gst/audio/mixerutils.h
   /usr/include/gstreamer-0.10/gst/audio/multichannel-enumtypes.h
   /usr/include/gstreamer-0.10/gst/audio/multichannel.h
+  /usr/lib/libgstaudio-0.10.dll.a
+  /usr/lib/libgstaudio-0.10.la
+  /usr/lib/pkgconfig/gstreamer-audio-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h
+  /usr/lib/libgstcdda-0.10.dll.a
+  /usr/lib/libgstcdda-0.10.la
+  /usr/lib/pkgconfig/gstreamer-cdda-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/fft/gstfft.h
   /usr/include/gstreamer-0.10/gst/fft/gstfftf32.h
   /usr/include/gstreamer-0.10/gst/fft/gstfftf64.h
   /usr/include/gstreamer-0.10/gst/fft/gstffts16.h
   /usr/include/gstreamer-0.10/gst/fft/gstffts32.h
+  /usr/lib/libgstfft-0.10.dll.a
+  /usr/lib/libgstfft-0.10.la
+  /usr/lib/pkgconfig/gstreamer-fft-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/floatcast/floatcast.h
+  /usr/lib/pkgconfig/gstreamer-floatcast-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/interfaces/colorbalance.h
   /usr/include/gstreamer-0.10/gst/interfaces/colorbalancechannel.h
   /usr/include/gstreamer-0.10/gst/interfaces/interfaces-enumtypes.h
@@ -317,21 +385,41 @@ Files included in the binary packages:
   /usr/include/gstreamer-0.10/gst/interfaces/tunernorm.h
   /usr/include/gstreamer-0.10/gst/interfaces/videoorientation.h
   /usr/include/gstreamer-0.10/gst/interfaces/xoverlay.h
+  /usr/lib/libgstinterfaces-0.10.dll.a
+  /usr/lib/libgstinterfaces-0.10.la
+  /usr/lib/pkgconfig/gstreamer-interfaces-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/netbuffer/gstnetbuffer.h
+  /usr/lib/libgstnetbuffer-0.10.dll.a
+  /usr/lib/libgstnetbuffer-0.10.la
+  /usr/lib/pkgconfig/gstreamer-netbuffer-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/pbutils/descriptions.h
   /usr/include/gstreamer-0.10/gst/pbutils/install-plugins.h
   /usr/include/gstreamer-0.10/gst/pbutils/missing-plugins.h
   /usr/include/gstreamer-0.10/gst/pbutils/pbutils-enumtypes.h
   /usr/include/gstreamer-0.10/gst/pbutils/pbutils.h
+  /usr/lib/libgstpbutils-0.10.dll.a
+  /usr/lib/libgstpbutils-0.10.la
+  /usr/lib/pkgconfig/gstreamer-pbutils-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/riff/riff-ids.h
   /usr/include/gstreamer-0.10/gst/riff/riff-media.h
   /usr/include/gstreamer-0.10/gst/riff/riff-read.h
+  /usr/lib/libgstriff-0.10.dll.a
+  /usr/lib/libgstriff-0.10.la
+  /usr/lib/pkgconfig/gstreamer-riff-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/rtp/gstbasertpaudiopayload.h
   /usr/include/gstreamer-0.10/gst/rtp/gstbasertpdepayload.h
   /usr/include/gstreamer-0.10/gst/rtp/gstbasertppayload.h
   /usr/include/gstreamer-0.10/gst/rtp/gstrtcpbuffer.h
   /usr/include/gstreamer-0.10/gst/rtp/gstrtpbuffer.h
   /usr/include/gstreamer-0.10/gst/rtp/gstrtppayloads.h
+  /usr/lib/libgstrtp-0.10.dll.a
+  /usr/lib/libgstrtp-0.10.la
+  /usr/lib/pkgconfig/gstreamer-rtp-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtsp-enumtypes.h
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtspbase64.h
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtspconnection.h
@@ -341,51 +429,31 @@ Files included in the binary packages:
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtsprange.h
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtsptransport.h
   /usr/include/gstreamer-0.10/gst/rtsp/gstrtspurl.h
+  /usr/lib/libgstrtsp-0.10.dll.a
+  /usr/lib/libgstrtsp-0.10.la
+  /usr/lib/pkgconfig/gstreamer-rtsp-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/sdp/gstsdp.h
   /usr/include/gstreamer-0.10/gst/sdp/gstsdpmessage.h
+  /usr/lib/libgstsdp-0.10.dll.a
+  /usr/lib/libgstsdp-0.10.la
+  /usr/lib/pkgconfig/gstreamer-sdp-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/tag/gsttagdemux.h
   /usr/include/gstreamer-0.10/gst/tag/tag.h
+  /usr/lib/libgsttag-0.10.dll.a
+  /usr/lib/libgsttag-0.10.la
+  /usr/lib/pkgconfig/gstreamer-tag-0.10.pc
+
   /usr/include/gstreamer-0.10/gst/video/gstvideofilter.h
   /usr/include/gstreamer-0.10/gst/video/gstvideosink.h
   /usr/include/gstreamer-0.10/gst/video/video.h
-  /usr/lib/libgstaudio-0.10.dll.a
-  /usr/lib/libgstaudio-0.10.la
-  /usr/lib/libgstcdda-0.10.dll.a
-  /usr/lib/libgstcdda-0.10.la
-  /usr/lib/libgstfft-0.10.dll.a
-  /usr/lib/libgstfft-0.10.la
-  /usr/lib/libgstinterfaces-0.10.dll.a
-  /usr/lib/libgstinterfaces-0.10.la
-  /usr/lib/libgstnetbuffer-0.10.dll.a
-  /usr/lib/libgstnetbuffer-0.10.la
-  /usr/lib/libgstpbutils-0.10.dll.a
-  /usr/lib/libgstpbutils-0.10.la
-  /usr/lib/libgstriff-0.10.dll.a
-  /usr/lib/libgstriff-0.10.la
-  /usr/lib/libgstrtp-0.10.dll.a
-  /usr/lib/libgstrtp-0.10.la
-  /usr/lib/libgstrtsp-0.10.dll.a
-  /usr/lib/libgstrtsp-0.10.la
-  /usr/lib/libgstsdp-0.10.dll.a
-  /usr/lib/libgstsdp-0.10.la
-  /usr/lib/libgsttag-0.10.dll.a
-  /usr/lib/libgsttag-0.10.la
   /usr/lib/libgstvideo-0.10.dll.a
   /usr/lib/libgstvideo-0.10.la
-  /usr/lib/pkgconfig/gstreamer-audio-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-cdda-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-fft-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-floatcast-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-interfaces-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-netbuffer-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-pbutils-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-plugins-base-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-riff-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-rtp-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-rtsp-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-sdp-0.10.pc
-  /usr/lib/pkgconfig/gstreamer-tag-0.10.pc
   /usr/lib/pkgconfig/gstreamer-video-0.10.pc
+
+(gstreamer0.10-plugins-base-devel)
+  /usr/lib/pkgconfig/gstreamer-plugins-base-0.10.pc
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/api-index.html
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/compiling.html
   /usr/share/gtk-doc/html/gst-plugins-base-libs-0.10/compiling.sgml
@@ -473,6 +541,10 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.10.22-1 -----
+Version bump.
+Separated all libraries and their -devel packages.
 
 ----- version 0.10.21-2 -----
 Added plugins: gio.
