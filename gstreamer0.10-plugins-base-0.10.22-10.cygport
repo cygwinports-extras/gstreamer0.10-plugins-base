@@ -4,7 +4,6 @@ inherit gst-plugins
 PATCH_URI="
 	0.10.20-cdparanoia.patch
 	0.10.20-gtk-doc.patch
-	0.10.20-ipv6.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"

@@ -3,49 +3,48 @@ gstreamer0.10-plugins-base
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-44
   alternatives
-  libglib2.0_0-2.18.4-1
-  libgstreamer0.10_0-0.10.22-1
-  libintl8-0.17-2
-  liboil0.3_0-0.3.15-2
+  libglib2.0_0-2.20.0-1
+  libgstreamer0.10_0-0.10.22-10
+  libintl8-0.17-10
+  liboil0.3_0-0.3.15-10
 
 (cdparanoia)
-  libcdio_cdda0-0.81-1
-  libcdio_paranoia0-0.81-1
+  libcdio_cdda0-0.81-10
+  libcdio_paranoia0-0.81-10
 (gnome_vfs)
-  libgnomevfs2_0-2.24.0-1
+  libgnomevfs2_0-2.26.0-1
 (libvisual)
-  libvisual0.4_0-0.4.0-2
-  libvisual0.4-plugins-0.4.0-2
+  libvisual0.4_0-0.4.0-10
+  libvisual0.4-plugins-0.4.0-10
 (ogg)
   libogg0-1.1.3-1
 (pango)
-  libpango1.0_0-1.22.4-1
+  libpango1.0_0-1.24.0-1
 (theora)
-  libtheoradec1-1.0-1
-  libtheoraenc1-1.0-1
+  libtheoradec1-1.0-10
+  libtheoraenc1-1.0-10
 (vorbis)
   libvorbis0-1.2.0-1
   libvorbisenc2-1.2.0-1
 (ximage)
-  libX11_6-1.1.5-2
-  libXext6-1.0.4-1
+  libX11_6-1.2-10
+  libXext6-1.0.5-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gtk-doc-1.11-1
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gtk-doc-1.11-2
+  libtool-2.2.6a-2
+  make-3.81-2
   pkg-config-0.23a-2
-  python-2.5.4-1
-  python-xml-0.8.4-2
+  python-2.5.4-10
   sed-4.1.5-2
 
 Canonical website:
@@ -148,14 +147,13 @@ Files included in the binary packages:
   /usr/lib/gstreamer-0.10/libgstvideoscale.la
   /usr/lib/gstreamer-0.10/libgstvideotestsrc.la
   /usr/lib/gstreamer-0.10/libgstvolume.la
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/ABOUT-NLS
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/AUTHORS
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/COPYING
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/COPYING.LIB
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/ChangeLog
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/INSTALL
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/NEWS
-  /usr/share/doc/gstreamer0.10-plugins-base-0.10.22/README
+  /usr/share/doc/gstreamer0.10-plugins-base/ABOUT-NLS
+  /usr/share/doc/gstreamer0.10-plugins-base/AUTHORS
+  /usr/share/doc/gstreamer0.10-plugins-base/COPYING
+  /usr/share/doc/gstreamer0.10-plugins-base/COPYING.LIB
+  /usr/share/doc/gstreamer0.10-plugins-base/ChangeLog
+  /usr/share/doc/gstreamer0.10-plugins-base/NEWS
+  /usr/share/doc/gstreamer0.10-plugins-base/README
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/GstPlayBaseBin.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch01.html
   /usr/share/gtk-doc/html/gst-plugins-base-plugins-0.10/ch02.html
@@ -542,77 +540,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 0.10.22-1 -----
-Version bump.
-Separated all libraries and their -devel packages.
-
------ version 0.10.21-2 -----
-Added plugins: gio.
-
------ version 0.10.21-1 -----
-Version bump.
-
------ version 0.10.20-1 -----
-Version bump.
-
------ version 0.10.19-1 -----
-Version bump.
-
------ version 0.10.17-1 -----
-Version bump.
-
------ version 0.10.15-1 -----
-Version bump.
-
------ version 0.10.14-1 -----
-Version bump.
-
------ version 0.10.13-1 -----
-Version bump.
-
------ version 0.10.12-1 -----
-Version bump.
-Added: cdparanoia
-Removed: xvimage
-
------ version 0.10.11-1 -----
-Version bump.
-
------ version 0.10.10-2 -----
-Rebuilt with updated toolchain.
-Requires cygport-0.2.7 to build separate external plugins simultaneously.
-
------ version 0.10.10-1 -----
-Version bump.
-
------ version 0.10.9-1 -----
-Version bump.
-
------ version 0.10.8-1 -----
-Version bump.
-alternatives is now used to provide unversioned gst-* commands.
-
------ version 0.10.7-1 -----
-Version bump.
-
------ version 0.10.6-1 -----
-Version bump.
-
------ version 0.10.5-1 -----
-Version bump.
-External plugins now built as separate source packages.
-
------ version 0.10.3-1 -----
-Version bump.
-Removed xvimage external plugin.
-
------ version 0.10.2-1 -----
-Version bump.
-Removed unnecessary import libraries from the plugin directory.
-
------ version 0.10.1-1 -----
-Initial release of 0.10 stable branch for Cygwin.
-External plugins: gnomevfs libvisual ogg pango theora vorbis ximage xvimage.
+----- version 0.10.22-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
