@@ -1,4 +1,4 @@
-GST_PLUGINS_EXT="cdparanoia gio gnome_vfs libvisual ogg pango theora vorbis ximage"
+GST_PLUGINS_EXT="cdparanoia gio libvisual ogg pango theora vorbis ximage"
 inherit gst-plugins
 
 PATCH_URI="
