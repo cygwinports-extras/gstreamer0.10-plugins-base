@@ -1,5 +1,5 @@
 category: Gnome Audio
-requires: cygwin libgstinterfaces0.10_0 libglib2.0-devel libgstreamer0.10-devel
+requires: libgstinterfaces0.10_0 libglib2.0-devel libgstreamer0.10-devel
 external-source: gstreamer0.10-plugins-base
 sdesc: "GStreamer media framework interfaces library (development)"
 ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."
