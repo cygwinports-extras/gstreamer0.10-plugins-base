@@ -1,5 +1,0 @@
-category: Gnome Audio
-requires: libgstapp0.10-devel libgstaudio0.10-devel libgstcdda0.10-devel libgstfft0.10-devel libgstinterfaces0.10-devel libgstnetbuffer0.10-devel libgstpbutils0.10-devel libgstriff0.10-devel libgstrtp0.10-devel libgstrtsp0.10-devel libgstsdp0.10-devel libgsttag0.10-devel libgstvideo0.10-devel
-external-source: gstreamer0.10-plugins-base
-sdesc: "Base plugins for the GStreamer media framework (development)"
-ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."

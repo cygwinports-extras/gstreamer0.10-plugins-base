@@ -1,5 +1,0 @@
-category: Gnome Audio
-requires: libgcc1 libglib2.0_0 libgstinterfaces0.10_0 libgstreamer0.10_0 libintl8
-external-source: gstreamer0.10-plugins-base
-sdesc: "GStreamer media framework audio library (runtime)"
-ldesc: "This is gst-plugins, a set of plug-ins for GStreamer."

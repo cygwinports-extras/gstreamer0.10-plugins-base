@@ -3,12 +3,14 @@ gstreamer0.10-plugins-base
 A collection of plugins for the GStreamer media framework.
 
 Runtime requirements:
-  cygwin-1.7.0-60
+  cygwin-1.7.0-62
   alternatives
-  libglib2.0_0-2.20.5-1
-  libgstreamer0.10_0-0.10.24-1
+  libgcc1-4.3.4-1
+  libglib2.0_0-2.22.2-1
+  libgstreamer0.10_0-0.10.25-1
   libintl8-0.17-11
   liboil0.3_0-0.3.16-1
+  libxml2-2.7.4-1
 
 (libvisual)
   libvisual0.4_0-0.4.0-10
@@ -16,25 +18,27 @@ Runtime requirements:
 (ogg)
   libogg0-1.1.3-1
 (pango)
-  libpango1.0_0-1.24.2-1
+  libcairo2-1.8.8-1
+  libpango1.0_0-1.26.0-1
 (theora)
-  libtheoradec1-1.0-10
-  libtheoraenc1-1.0-10
+  libtheoradec1-1.1.1-1
+  libtheoraenc1-1.1.1-1
 (vorbis)
   libvorbis0-1.2.0-1
   libvorbisenc2-1.2.0-1
 (ximage)
-  libX11_6-1.2.2-1
-  libXext6-1.0.5-1
+  libX11_6-1.3.2-1
+  libXext6-1.1.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
-  automake1.9-1.9.6-10
+  automake1.10-1.10.2-10
   binutils-2.19.51-1
-  cygport-0.9.9-1
+  cygport-0.9.10-1
   gawk-3.1.7-1
-  gcc4-core-4.3.2-2
+  gcc4-core-4.3.4-1
+  gobject-introspection-0.6.5-2
   gtk-doc-1.11-2
   libtool-2.2.7a-14
   make-3.81-2
@@ -51,54 +55,34 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gstreamer0.10-plugins-base-0.10.24-X-src.tar.bz2
+  unpack gstreamer0.10-plugins-base-0.10.25-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gstreamer0.10-plugins-base-0.10.24-X.cygport all
+  cygport ./gstreamer0.10-plugins-base-0.10.25-X.cygport all
 
 This will create:
-  /usr/src/gstreamer0.10-plugins-base-0.10.24-X-src.tar.bz2
-  /usr/src/gstreamer0.10-plugins-base-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-base-devel-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-gio-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-libvisual-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-ogg-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-pango-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-theora-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-vorbis-0.10.24-X.tar.bz2
-  /usr/src/gstreamer0.10-plugins-ximage-0.10.24-X.tar.bz2
-  /usr/src/libgstapp0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstapp0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstaudio0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstaudio0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstcdda0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstcdda0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstfft0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstfft0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstfloatcast0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstinterfaces0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstinterfaces0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstnetbuffer0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstnetbuffer0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstpbutils0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstpbutils0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstriff0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstriff0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstrtp0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstrtp0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstrtsp0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstrtsp0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstsdp0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstsdp0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgsttag0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgsttag0.10_0-0.10.24-X.tar.bz2
-  /usr/src/libgstvideo0.10-devel-0.10.24-X.tar.bz2
-  /usr/src/libgstvideo0.10_0-0.10.24-X.tar.bz2
+  /usr/src/girepository-GstInterfaces0.10-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-base-0.10.25-X-src.tar.bz2
+  /usr/src/gstreamer0.10-plugins-base-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-gio-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-libvisual-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ogg-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-pango-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-theora-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-vorbis-0.10.25-X.tar.bz2
+  /usr/src/gstreamer0.10-plugins-ximage-0.10.25-X.tar.bz2
+  /usr/src/libgstinterfaces0.10-devel-0.10.25-X.tar.bz2
+  /usr/src/libgstinterfaces0.10_0-0.10.25-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 0.10.25-1 -----
+Version bump.
+All libraries packaged together as libgstinterfaces.
+Added GObject Introspection support.
 
 ----- version 0.10.24-1 -----
 Version bump.

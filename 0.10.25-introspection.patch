@@ -1,0 +1,143 @@
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/app/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/app/Makefile.am	2009-10-30 13:37:04.472578200 -0500
+@@ -48,7 +48,7 @@ GstApp-@GST_MAJORMINOR@.gir: $(INTROSPEC
+ 		-I$(top_builddir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-base-0.10` \
+-		--library=gstapp-0.10 \
++		--library=libgstapp-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstBase-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/audio/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/audio/Makefile.am	2009-10-30 13:37:09.838987500 -0500
+@@ -77,7 +77,7 @@ GstAudio-@GST_MAJORMINOR@.gir: $(INTROSP
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-base-0.10` \
+ 		--add-include-path=$(builddir)/../interfaces \
+-		--library=gstaudio-0.10 \
++		--library=libgstaudio-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstBase-0.10 \
+ 		--include=GstInterfaces-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/cdda/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/cdda/Makefile.am	2009-10-30 13:37:17.904201600 -0500
+@@ -31,7 +31,7 @@ GstCdda-@GST_MAJORMINOR@.gir: $(INTROSPE
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-base-0.10` \
+ 		--add-include-path=$(builddir)/../tag \
+-		--library=gstcdda-0.10 \
++		--library=libgstcdda-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstBase-0.10 \
+ 		--include=GstTag-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/fft/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/fft/Makefile.am	2009-10-30 13:37:23.769811800 -0500
+@@ -58,7 +58,7 @@ GstFft-@GST_MAJORMINOR@.gir: $(INTROSPEC
+ 		--strip-prefix=Gst \
+ 		$(gir_cincludes) \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstfft-0.10 \
++		--library=libgstfft-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/interfaces/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/interfaces/Makefile.am	2009-10-30 13:37:32.661827300 -0500
+@@ -88,7 +88,7 @@ GstInterfaces-@GST_MAJORMINOR@.gir: $(IN
+ 		-I$(top_srcdir)/gst-libs \
+ 		-I$(top_builddir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstinterfaces-0.10 \
++		--library=libgstinterfaces-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/netbuffer/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/netbuffer/Makefile.am	2009-10-30 13:37:38.371437300 -0500
+@@ -23,7 +23,7 @@ GstNetbuffer-@GST_MAJORMINOR@.gir: $(INT
+ 		--strip-prefix=Gst \
+ 		$(gir_cincludes) \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstnetbuffer-0.10 \
++		--library=libgstnetbuffer-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/pbutils/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/pbutils/Makefile.am	2009-10-30 13:37:44.658248200 -0500
+@@ -64,7 +64,7 @@ GstPbutils-@GST_MAJORMINOR@.gir: $(INTRO
+ 		-I$(top_srcdir)/gst-libs \
+ 		-I$(top_builddir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstpbutils-0.10 \
++		--library=libgstpbutils-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/riff/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/riff/Makefile.am	2009-10-30 13:37:50.024657600 -0500
+@@ -33,7 +33,7 @@ GstRiff-@GST_MAJORMINOR@.gir: $(INTROSPE
+ 		--strip-prefix=Gst \
+ 		$(gir_cincludes) \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstriff-0.10 \
++		--library=libgstriff-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/rtp/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/rtp/Makefile.am	2009-10-30 13:37:55.609467300 -0500
+@@ -36,7 +36,7 @@ GstRtp-@GST_MAJORMINOR@.gir: $(INTROSPEC
+ 		-I$(top_srcdir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-base-0.10` \
+-		--library=gstrtp-0.10 \
++		--library=libgstrtp-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstBase-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/rtsp/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/rtsp/Makefile.am	2009-10-30 13:38:06.794686800 -0500
+@@ -68,7 +68,7 @@ GstRtsp-@GST_MAJORMINOR@.gir: $(INTROSPE
+ 		-I$(top_srcdir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=$(builddir)/../sdp \
+-		--library=gstrtsp-0.10 \
++		--library=libgstrtsp-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstSdp-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/sdp/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/sdp/Makefile.am	2009-10-30 13:38:13.986299400 -0500
+@@ -26,7 +26,7 @@ GstSdp-@GST_MAJORMINOR@.gir: $(INTROSPEC
+ 		$(gir_cincludes) \
+ 		-I$(top_srcdir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gstsdp-0.10 \
++		--library=libgstsdp-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/tag/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/tag/Makefile.am	2009-10-30 13:38:19.680309300 -0500
+@@ -27,7 +27,7 @@ GstTag-@GST_MAJORMINOR@.gir: $(INTROSPEC
+ 		--strip-prefix=Gst \
+ 		$(gir_cincludes) \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+-		--library=gsttag-0.10 \
++		--library=libgsttag-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
+ 		--pkg gstreamer-0.10 \
+--- origsrc/gst-plugins-base-0.10.25/gst-libs/gst/video/Makefile.am	2009-09-16 16:00:31.000000000 -0500
++++ src/gst-plugins-base-0.10.25/gst-libs/gst/video/Makefile.am	2009-10-30 13:38:26.232320700 -0500
+@@ -47,7 +47,7 @@ GstVideo-@GST_MAJORMINOR@.gir: $(INTROSP
+ 		-I$(top_builddir)/gst-libs \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-0.10`/gst \
+ 		--add-include-path=`$(PKG_CONFIG) --variable=libdir gstreamer-base-0.10` \
+-		--library=gstvideo-0.10 \
++		--library=libgstvideo-0.10.la \
+ 		--include=Gst-0.10 \
+ 		--include=GstBase-0.10 \
+ 		--libtool="$(top_builddir)/libtool" \
