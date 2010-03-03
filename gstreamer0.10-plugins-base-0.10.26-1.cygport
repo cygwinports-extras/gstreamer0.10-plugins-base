@@ -1,8 +1,7 @@
-GST_PLUGINS_EXT="gio libvisual ogg pango theora vorbis ximage" # cdparanoia
+GST_PLUGINS_EXT="gio ogg pango theora vorbis ximage" # cdparanoia libvisual
 inherit gst-plugins
 
-PATCH_URI="0.10.20-gtk-doc.patch
-           0.10.25-introspection.patch"
+PATCH_URI="0.10.25-introspection.patch"
 
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
 PKG_HINTS="base libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
