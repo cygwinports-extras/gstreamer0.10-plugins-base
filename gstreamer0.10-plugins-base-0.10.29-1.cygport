@@ -1,8 +1,6 @@
 GST_PLUGINS_EXT="gio ogg pango theora vorbis ximage" # cdparanoia libvisual
 inherit gst-plugins
 
-PATCH_URI="0.10.25-introspection.patch"
-
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
 PKG_HINTS="base libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
 libgstinterfaces0_10_0_CONTENTS="usr/bin/cyggst*-0.10-0.dll"
