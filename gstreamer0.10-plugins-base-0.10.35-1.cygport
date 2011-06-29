@@ -18,6 +18,6 @@ do
 done
 unset ext
 
-gstreamer0_10_plugins_base_CONTENTS+=" etc/ usr/bin/gst* usr/lib/gstreamer-0.10/
+gstreamer0_10_plugins_base_CONTENTS+=" usr/bin/gst* usr/lib/gstreamer-0.10/
                                        usr/share/doc/ usr/share/gtk-doc/html/${ORIG_PN}-plugins-0.10/
                                        usr/share/locale/ usr/share/man/"
