@@ -1,4 +1,5 @@
-GST_PLUGINS_EXT="gio ogg pango theora vorbis ximage" # cdparanoia libvisual
+GST_PLUGINS_ENABLE="gio ogg pango theora vorbis ximage"
+GST_PLUGINS_DISABLE="alsa cdparanoia gnome_vfs gst_v4l libvisual xvideo"
 inherit gst-plugins
 
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
@@ -8,7 +9,7 @@ libgstinterfaces0_10_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig
                                      usr/share/gtk-doc/html/${ORIG_PN}-libs-0.10/"
 girepository_GstInterfaces0_10_CONTENTS="usr/*/gir*-1.0/Gst*-0.10.*"
 
-for ext in ${GST_PLUGINS_EXT}
+for ext in ${GST_PLUGINS_ENABLE}
 do
 	PKG_NAMES+=" gstreamer0.10-plugins-${ext}"
 	PKG_HINTS+=" ${ext}"
@@ -20,4 +21,6 @@ unset ext
 
 gstreamer0_10_plugins_base_CONTENTS+=" usr/bin/gst* usr/lib/gstreamer-0.10/
                                        usr/share/doc/ usr/share/gtk-doc/html/${ORIG_PN}-plugins-0.10/
-                                       usr/share/locale/ usr/share/man/"
+                                       usr/share/${ORIG_PN}/ usr/share/locale/ usr/share/man/"
+
+KEEP_LA_FILES="shared"
