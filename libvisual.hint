@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libvisual0.4_0 libvisual0.4-plugins
-external-source: gstreamer0.10-plugins-base
-sdesc: "LibVisual plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "LibVisual plugin for the GStreamer multimedia framework (0.10 branch)"

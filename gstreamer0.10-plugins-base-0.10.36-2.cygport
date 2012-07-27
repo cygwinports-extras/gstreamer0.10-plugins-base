@@ -2,8 +2,15 @@ GST_PLUGINS_ENABLE="gio ogg pango theora vorbis ximage"
 GST_PLUGINS_DISABLE="alsa cdparanoia gnome_vfs gst_v4l libvisual xvideo"
 inherit gst-plugins
 
+CATEGORY="Audio Video"
+SUMMARY="GStreamer 0.10 Base Plug-ins"
+DESCRIPTION="GStreamer Base Plug-ins is a well-groomed and well-maintained
+collection of GStreamer plug-ins and elements, spanning the range of possible
+types of elements one would want to write for GStreamer. It also contains
+helper libraries and base classes useful for writing elements. A wide range
+of video and audio decoders, encoders, and filters are included."
+
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
-PKG_HINTS="base libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
 libgstinterfaces0_10_0_CONTENTS="usr/bin/cyggst*-0.10-0.dll"
 libgstinterfaces0_10_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                                      usr/share/gtk-doc/html/${ORIG_PN}-libs-0.10/"
@@ -12,9 +19,9 @@ girepository_GstInterfaces0_10_CONTENTS="usr/*/gir*-1.0/Gst*-0.10.*"
 for ext in ${GST_PLUGINS_ENABLE}
 do
 	PKG_NAMES+=" gstreamer0.10-plugins-${ext}"
-	PKG_HINTS+=" ${ext}"
 	declare \
 	gstreamer0_10_plugins_${ext}_CONTENTS="${GST_PLUGINDIR#/}/*gst${ext//_/}*"
+	declare gstreamer0_10_plugins_${ext}_SUMMARY="GStreamer 0.10 ${ext} plugin"
 	gstreamer0_10_plugins_base_CONTENTS+=" --exclude=*gst${ext//_/}*"
 done
 unset ext
@@ -22,5 +29,8 @@ unset ext
 gstreamer0_10_plugins_base_CONTENTS+=" usr/bin/gst* usr/lib/gstreamer-0.10/
                                        usr/share/doc/ usr/share/gtk-doc/html/${ORIG_PN}-plugins-0.10/
                                        usr/share/${ORIG_PN}/ usr/share/locale/ usr/share/man/"
+gstreamer0_10_plugins_gio_REQUIRES="gvfs"
+gstreamer0_10_plugins_theora_REQUIRES="gstreamer0.10-plugins-ogg"
+gstreamer0_10_plugins_vorbis_REQUIRES="gstreamer0.10-plugins-ogg"
 
-KEEP_LA_FILES="shared"
+KEEP_LA_FILES="none"

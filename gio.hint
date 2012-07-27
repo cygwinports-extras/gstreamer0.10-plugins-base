@@ -1,5 +1,0 @@
-category: Audio Gnome
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 gvfs
-external-source: gstreamer0.10-plugins-base
-sdesc: "GIO plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "GIO plugin for the GStreamer multimedia framework (0.10 branch)"

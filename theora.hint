@@ -1,6 +1,0 @@
-category: Audio Video
-requires: gstreamer0.10-plugins-ogg libgcc1 libglib2.0_0 libgstreamer0.10_0 libgstinterfaces0.10_0 libtheoradec1 libtheoraenc1
-external-source: gstreamer0.10-plugins-base
-sdesc: "Theora plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "Theora plugin for the GStreamer multimedia framework (0.10 branch)"
-

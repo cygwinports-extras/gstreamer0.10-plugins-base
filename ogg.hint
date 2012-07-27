@@ -1,6 +1,0 @@
-category: Audio
-requires: libgcc1 libglib2.0_0 libgstreamer0.10_0 libgstinterfaces0.10_0 libintl8 libogg0
-external-source: gstreamer0.10-plugins-base
-sdesc: "Ogg plugin for the GStreamer multimedia framework (0.10 branch)"
-ldesc: "Ogg plugin for the GStreamer multimedia framework (0.10 branch)"
-
