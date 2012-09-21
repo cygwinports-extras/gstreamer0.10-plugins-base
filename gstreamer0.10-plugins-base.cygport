@@ -1,7 +1,6 @@
-GST_PLUGINS_ENABLE="gio ogg pango theora vorbis ximage"
-GST_PLUGINS_DISABLE="alsa cdparanoia gnome_vfs gst_v4l libvisual xvideo"
-inherit gst-plugins
-
+NAME="gstreamer0.10-plugins-base"
+VERSION=0.10.36
+RELEASE=2
 CATEGORY="Audio Video"
 SUMMARY="GStreamer 0.10 Base Plug-ins"
 DESCRIPTION="GStreamer Base Plug-ins is a well-groomed and well-maintained
@@ -9,6 +8,9 @@ collection of GStreamer plug-ins and elements, spanning the range of possible
 types of elements one would want to write for GStreamer. It also contains
 helper libraries and base classes useful for writing elements. A wide range
 of video and audio decoders, encoders, and filters are included."
+GST_PLUGINS_ENABLE="gio ogg pango theora vorbis ximage"
+GST_PLUGINS_DISABLE="alsa cdparanoia gnome_vfs gst_v4l libvisual xvideo"
+inherit gst-plugins
 
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
 libgstinterfaces0_10_0_CONTENTS="usr/bin/cyggst*-0.10-0.dll"
