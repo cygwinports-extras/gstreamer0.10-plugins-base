@@ -13,6 +13,7 @@ GST_PLUGINS_DISABLE="alsa cdparanoia gnome_vfs gst_v4l libvisual xvideo"
 inherit gst-plugins
 
 PKG_NAMES="${PN} libgstinterfaces0.10_0 libgstinterfaces0.10-devel girepository-GstInterfaces0.10"
+libgstinterfaces0_10_o_REQUIRES="iso-codes"  # libgsttag
 libgstinterfaces0_10_0_CONTENTS="usr/bin/cyggst*-0.10-0.dll"
 libgstinterfaces0_10_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                                      usr/share/gtk-doc/html/${ORIG_PN}-libs-0.10/"
